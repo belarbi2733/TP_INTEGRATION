@@ -30,16 +30,6 @@ class GumballMachine
     {
         return $this->bdd;
     }
-	public function setGumballs($amount)
-	{
-		$this->gumballs = $amount;
-	}
-
-	
-	public function turnWheel()
-	{
-		$this->setGumballs($this->getGumballs() - 1);
-	}
 	
 	public function AffichageProf($etat)
 	{
@@ -65,9 +55,6 @@ class GumballMachine
 	    
 	}
 	
-	
-	
-	//Inserion dans la table Prof 
 	public function InsertP($bdd, $nom, $prenom , $date_naissance,$lieu)
 	{  
 	    try 
@@ -93,7 +80,6 @@ class GumballMachine
 	    return $user['id'];
 	}
 	
-	//Insertion dans la table Cours
 	public function InsertC($intitule, $duree , $id_prof)
 	{
 	    try
@@ -113,12 +99,11 @@ class GumballMachine
 	
 	public function UpdateP()
 	{
-	    //$this->gumballs = $amount;
+	    
 	}
 	
-	// The user turns the wheel, machine dispenses gumball!
 	public function DeleteP()
 	{
-	    //$this->setGumballs($this->getGumballs() - 1);
+	    
 	}
 }
