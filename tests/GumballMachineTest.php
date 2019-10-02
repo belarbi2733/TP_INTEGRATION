@@ -25,9 +25,9 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
     {
         $this->gumballMachineInstance->AffichageProf("After Insertion of Professors");
     }
+     
     
-    
-    
+    ///  
     public function testAffichageCoursAVI()
     {
         $this->gumballMachineInstance->AffichageCours("Before Insertion of Courses");
