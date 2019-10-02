@@ -6,12 +6,17 @@ class GumballMachine
 	private $gumballs;
 	
 	private $bdd;
+	private $servername="localhost";
+	private $db_name="test";
+	private $db_user="root";
+	private $db_pass="";
+	  
 	
 	function __construct()
 	{
 	    try
 	    {
-	        $this->bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', '');
+	        $this->bdd =  new PDO("mysql:host=$this->servername;dbname=$this->db_name", $this->db_user, $this->db_pass);
 	        //print "Yes Dans le constructeur de BaseClass\n";
 	    }
 	    
