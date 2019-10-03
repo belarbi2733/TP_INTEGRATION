@@ -27,7 +27,7 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
     }
     public function testInsertP()
     {
-        $this->gumballMachineInstance->InsertP($this->gumballMachineInstance->getDB(),$this->nom,$this->prenom,$this->date_naissance,$this->lieu_naissance);
+        $this->assertEquals(true,$this->gumballMachineInstance->InsertP($this->gumballMachineInstance->getDB(),$this->nom,$this->prenom,$this->date_naissance,$this->lieu_naissance));
        
     }
     public function testAffichageProfAPI()

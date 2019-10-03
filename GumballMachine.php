@@ -69,10 +69,12 @@ class GumballMachine
 	       $sql = "INSERT INTO prof (nom, prenom, date_naissance, lieu_naissance) VALUES ('$nom','$prenom', '$date_naissance','$lieu')";
 	       $bdd->exec($sql);
 	       echo "\n We Hae a new insertion of Professor";
+	       return true;
 	    }
 	    catch(PDOException $e)
 	    {
 	        echo $sql . "<br>" . $e->getMessage();
+	        return false;
 	    }
 	    
 	}
