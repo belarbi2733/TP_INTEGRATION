@@ -45,7 +45,7 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
     public function testInsertC()
     {
         $resultat=$this->gumballMachineInstance->InsertC($this->intitule,$this->duree,$this->gumballMachineInstance->GetIdP($this->nom,$this->prenom));
-        echo $resultat;
+        echo $resultat."      \n";
         $this->assertContains('\n We Have a new insertion of Corse', $resultat);
         
     }
