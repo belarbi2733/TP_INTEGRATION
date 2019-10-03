@@ -103,7 +103,8 @@ class GumballMachine
 	        $this->bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	        $sql = "INSERT INTO cours (intitule, duree, id_prof) VALUES ('$intitule','$duree', '$id_prof')";
 	        $this->bdd->exec($sql);
-	        return "\n We Have a new insertion of Corse";
+	        echo "\n We Have a new insertion of Corse";
+	        return "good job";
 	    }
 	    catch(PDOException $e)
 	    {
