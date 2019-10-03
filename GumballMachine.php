@@ -17,6 +17,10 @@ class GumballMachine
 	    try
 	    {
 	        $this->bdd =  new PDO("mysql:host=$this->servername;dbname=$this->db_name", $this->db_user, $this->db_pass);
+	        $sql="CREATE TABLE `test`.`prof` ( `id` INT NOT NULL AUTO_INCREMENT , `nom` VARCHAR(25) NOT NULL , `prenom` VARCHAR(25) NOT NULL , `date_naissance` DATE NOT NULL , `lieu_naissance` TEXT NOT NULL , PRIMARY KEY (`id`)) ";
+	        $stmt = $this->bdd->prepare($sql);
+	        $stmt->execute();
+	        
 	        //print "Yes Dans le constructeur de BaseClass\n";
 	    }
 	    
@@ -40,6 +44,7 @@ class GumballMachine
 	    {
 	        echo "* id: " . $row["id"]. " Last Name: " . $row["nom"]. " First Name: " . $row["prenom"]. " Birth Date: " . $row["date_naissance"]. " birth Place: " . $row["lieu_naissance"] ."\n";
 	    }
+	    return true;
 	    
 	}
 	

@@ -23,7 +23,7 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
     
     public function testAffichageProfAVI()
     {
-        $this->gumballMachineInstance->AffichageProf("Before Insertion of Professors");
+        $this->assertEquals(true,$this->gumballMachineInstance->AffichageProf("Before Insertion of Professors"));
     }
     public function testInsertP()
     {
