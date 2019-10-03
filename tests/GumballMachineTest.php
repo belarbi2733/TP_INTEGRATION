@@ -9,7 +9,7 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
     
     private $nom="XXX1";
     private $prenom="YYY1";
-    private $date_naissance="1972-04-22";
+    private $date_naissance="ssss-04-22";
     private $lieu_naissance="Mons";
     
     private $intitule="ZZZ2";
