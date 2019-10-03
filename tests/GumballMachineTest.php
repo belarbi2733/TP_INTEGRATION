@@ -9,7 +9,7 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
     
     private $nom="XXX1";
     private $prenom="YYY1";
-    private $date_naissance="ssss-04-22";
+    private $date_naissance="1972-04-22";
     private $lieu_naissance="Mons";
     
     private $intitule="ZZZ2";
@@ -27,8 +27,10 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
     }
     public function testInsertP()
     {
+        $max__id1=$this->gumballMachineInstance->GetLastIDP();
         $this->assertEquals(true,$this->gumballMachineInstance->InsertP($this->gumballMachineInstance->getDB(),$this->nom,$this->prenom,$this->date_naissance,$this->lieu_naissance));
-       
+        $max__id2=$this->gumballMachineInstance->GetLastIDP();
+        $this->assertEquals($max__id1+1,$max__id2);
     }
     public function testAffichageProfAPI()
     {
