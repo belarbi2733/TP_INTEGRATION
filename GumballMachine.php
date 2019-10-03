@@ -17,9 +17,11 @@ class GumballMachine
 	    try
 	    {
 	        $this->bdd =  new PDO("mysql:host=$this->servername;dbname=$this->db_name", $this->db_user, $this->db_pass);
+	        $this->bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	        $sql="CREATE TABLE `test`.`prof` ( `id` INT NOT NULL AUTO_INCREMENT , `nom` VARCHAR(25) NOT NULL , `prenom` VARCHAR(25) NOT NULL , `date_naissance` DATE NOT NULL , `lieu_naissance` TEXT NOT NULL , PRIMARY KEY (`id`)) ";
-	        $stmt = $this->bdd->prepare($sql);
+	        $this->bdd->exec($sql);
 	        $stmt->execute();
+	        echo "\n We Hae a new insertion of Professor";
 	        
 	        //print "Yes Dans le constructeur de BaseClass\n";
 	    }
