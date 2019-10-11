@@ -48,6 +48,7 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
         //echo $resultat."     liverpool \n";
         $this->assertContains('good job', $resultat);
         
+        
     }
     public function testAffichageCoursAPI()
     {
